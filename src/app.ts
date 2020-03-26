@@ -29,6 +29,7 @@ export const run = async () => {
 
 	const choices = [
 		{ name: 'package', value: 'pack', checked: false },
+		{ name: 'typescript & tslint', value: 'tt', checked: false },
 		{ name: 'src folder', value: 'src', checked: true },
 		{ name: 'tsconfig', value: 'config', checked: true },
 		{ name: '.tslint', value: 'lint', checked: true },
@@ -46,12 +47,11 @@ export const run = async () => {
 		])
 	).checkbox as string[]
 
-	if (prompted.some(value => value === 'pack')) {
-		//TODO
-		//const pack_str = fs.readFileSync(`${PATTERN_FOLDER}/package.json`, 'utf8')
-		//const pack = JSON.parse(pack_str)
-		//console.log(pack)
-	}
+	console.log('Process...')
+	if (prompted.some(value => value === 'package' || value === 'tt'))
+		await cp(path, 'package', './package.json')
+	if (prompted.some(value => value === 'tt'))
+		await sh(`cd ${path}; npm i typescript --save-dev; npm i tslint --save-dev`)
 	if (prompted.some(value => value === 'src')) {
 		await sh(`cd ${path}; mkdir -p src`)
 		await cp(path, 'index.ts', './src/')

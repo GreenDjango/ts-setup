@@ -10,7 +10,9 @@
     "ts-setup": "build/index.js"
   },
   "dependencies": {
-    "inquirer": "^6.5.2",
+    "inquirer": "^6.5.2"
+  },
+  "devDependencies": {
     "@types/inquirer": "^6.5.0",
     "tslint": "^6.1.0",
     "typescript": "^3.8.3"

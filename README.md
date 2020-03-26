@@ -9,7 +9,7 @@ Setup with node cli for typescript project.
 1. Install node https://nodejs.org/en/ (use `sudo apt-get node` for ubuntu or `sudo dnf install node` for fedora)
 2. `git clone https://github.com/GreenDjango/ts-setup`
 3. `cd ts-setup`
-4. `npm i --production -g`
+4. `sudo npm i --production -g`
 
 ## Update
 
@@ -17,7 +17,7 @@ Make the **Install** again
 
 ## Uninstall
 
-???
+`npm uninstall -g ts-setup`
 
 ---
 
