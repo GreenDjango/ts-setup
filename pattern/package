@@ -1,0 +1,16 @@
+{
+  "name": "myname",
+  "version": "1.0.0",
+  "description": "myname project",
+  "main": "build/index.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc; chmod a+x build/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

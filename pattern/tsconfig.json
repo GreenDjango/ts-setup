@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"outDir": "build",
+		"strict": true,
+		"resolveJsonModule": true,
+		"target": "es2015",
+		"esModuleInterop": true
+	},
+	"compileOnSave": true,
+	"include": ["src"]
+}

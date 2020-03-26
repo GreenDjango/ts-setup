@@ -1,0 +1,29 @@
+{
+  "name": "ts-setup",
+  "version": "0.1.0",
+  "description": "setup prog for typescript project",
+  "main": "build/index.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "bin": {
+    "ts-setup": "build/index.js"
+  },
+  "dependencies": {
+    "inquirer": "^6.5.2",
+    "@types/inquirer": "^6.5.0",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc; chmod a+x build/index.js",
+    "prod": "rm -rf build prod; npm run build; cp -r build prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GreenDjango/ts-setup.git"
+  },
+  "author": "Theo C.",
+  "license": "MIT"
+}
